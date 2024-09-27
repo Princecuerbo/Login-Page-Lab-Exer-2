@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightyellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #form {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #555;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            color: #333;
+        }
+        #loginbtn {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h1>Login</h1>
+        <label for="username">Enter username</label>
+        <input type="text" id="username">
+        <small id="usernameError"></small>
+        <label for="password">Enter Password</label>
+        <input type="password" id="password">
+        <small id="passwordError"></small>
+        <button id="loginbtn" onclick="login()">Log In</button>
+    </div>
+
+    <script>
+        function login() {
+            var corUsername = "Prince";
+            var corPassword = "1234";
+
+            var typeUsername = document.getElementById("username").value;
+            var typePassword = document.getElementById("password").value;
+
+            if (typeUsername === corUsername && typePassword === corPassword) {
+                document.getElementById("usernameError").innerHTML = "Correct username and password";
+                location.href = "Calculator.html";
+            } else {
+                document.getElementById("passwordError").innerHTML = "Invalid username or password";
+                
+                
+            }
+        }
+    </script>
+</body>
+</html>
